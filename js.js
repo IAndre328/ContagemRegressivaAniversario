@@ -17,10 +17,8 @@ const getDaysInYear = year => isLeapYear(year) ? 366 : 365;
 const daysInYear = getDaysInYear(currentYear);
 console.log(`O ano ${currentYear} tem ${daysInYear} dias.`);
 
-function updateCountdown(dev = false) {
-    if (!dev){
+function updateCountdown() { 
     currentDate = new Date();
-    }
 
     const difference = myBirthday - currentDate;
 
