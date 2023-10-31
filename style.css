@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 8vw;
+}
+
+body {
+    color: rgb(57, 57, 173);
+    font-family: monospace,"Courier New", Courier;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 20px;
+    background-color: aquamarine;
+    padding: 7px;
+    display: flex; /* Alterado de grid para flex */
+    gap: 30px;
+}
+
+main div {
+    font-size: 5vw;
+    padding: 10px;
+    text-align: center;
+    flex: 1; /* Para distribuir igualmente o espaço horizontal */
+}
+
+span {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 450px) {
+    main {
+        gap: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    main div{
+        font-size: 2rem;
+    }
+}
