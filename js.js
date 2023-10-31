@@ -46,21 +46,3 @@ function updateCountdown(dev = false) {
 }
 
 let loop = setInterval(updateCountdown, 1000);
-
-// area dev
-
-// Função para definir a data de teste
-function setDateForTesting(year, month, day) {
-    const testingDate = new Date(year, month - 1, day); // O mês é indexado a partir de 0
-    currentDate = testingDate;
-    loop = setInterval(updateCountdown(true),1000);
-}
-
-// Restaure a função Date.now para o comportamento normal
-function resetDate() {
-    Date.now = () => new Date().getTime();
-}
-
-
-// Quando terminar de testar, redefina a data atual para a data do sistema
-
